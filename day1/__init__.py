@@ -1,4 +1,4 @@
-from utils import readlines
+from utils import read_input
 
 
 def part1(expenses):
@@ -19,7 +19,7 @@ def part2(expenses):
 
 
 if __name__ == '__main__':
-    expenses = readlines('input.txt', fn=int)
+    expenses = read_input('input.txt', fn=int, by_line=True)
     solution1 = part1(expenses)
     solution2 = part2(expenses)
 
