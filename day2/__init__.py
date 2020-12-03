@@ -1,4 +1,4 @@
-from utils import read_input
+from utils import *
 
 
 def convert_password_part1(pw: str) -> tuple:
@@ -38,8 +38,8 @@ if __name__ == '__main__':
 
     # Part 1
     passwords = [convert_password_part1(x) for x in data]
-    print(sum(1 if is_valid_part1(pw) else 0 for pw in passwords))
+    print(count_matches(passwords, is_valid_part1))
 
     # Part 2
     passwords = [convert_password_part2(x) for x in data]
-    print(sum(1 if is_valid_part2(pw) else 0 for pw in passwords))
+    print(count_matches(passwords, is_valid_part2))

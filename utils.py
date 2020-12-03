@@ -9,3 +9,8 @@ def read_input(path: str, *, by_line: bool, fn: Optional[Callable] = None) -> li
         if fn is not None:
             ret = map(fn, ret)
         return list(ret)
+
+
+def count_matches(iter, fn: Callable) -> int:
+    # return len(filter(fn, iter))
+    return sum(1 if fn(x) else 0 for x in iter)
