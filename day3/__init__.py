@@ -2,7 +2,7 @@ from utils import *
 
 
 def check_position(data, i: int, slope_y, slope_x):
-    return data[slope_y*i][(slope_x*i)%len(data[0])] == '#'
+    return data[slope_y*i][(slope_x*i) % len(data[0])] == '#'
 
 
 def check_all(data):
